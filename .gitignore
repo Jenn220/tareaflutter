@@ -1,4 +1,6 @@
+# =============================
 # Miscellaneous
+# =============================
 *.class
 *.log
 *.pyc
@@ -12,7 +14,9 @@
 .swiftpm/
 migrate_working_dir/
 
-# IntelliJ related
+# =============================
+# IDEs and Editor Configs
+# =============================
 *.iml
 *.ipr
 *.iws
@@ -22,23 +26,34 @@ migrate_working_dir/
 # Descomenta si no quieres subir configuración local de VS Code
 #.vscode/
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
+# =============================
+# Flutter / Dart / Pub
+# =============================
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
+**/doc/api/
+**/ios/Flutter/.last_build_id
 /build/
 
-# Symbolication related
+# =============================
+# Symbolication / Obfuscation
+# =============================
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
 
+# =============================
 # Android Studio build artifacts
+# =============================
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# =============================
+# Flutter platform folders (opcional)
+# =============================
+linux/
+macos/
+windows/
