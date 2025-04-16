@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login/description.dart';
+import 'package:login/options.dart';
 import 'app.dart';
 import 'form_screen.dart';
 import 'welcome_screen.dart';
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const WelcomeScreen(),
         '/login': (context) => const Login(),
         '/form': (context) => const FormScreen(),
+        '/description': (context) => const DescriptionScreen(),
+        '/options': (context) => const OptionsScreen(),
       },
     );
   }

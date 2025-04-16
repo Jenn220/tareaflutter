@@ -15,18 +15,18 @@ class _FormScreenState extends State<FormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 251, 231, 231),
-      appBar: AppBar(
-        title: const Text('Datos Personales'),
-        backgroundColor: Colors.deepOrange,
+        appBar: AppBar(
+          title: const Text('Datos Personales'),
+          backgroundColor: Colors.deepOrange,
       ),
       body: Center(
-        child: Container(
+         child: Container(
           padding: const EdgeInsets.all(25),
-          width: 360,
-          decoration: BoxDecoration(
+            width: 360,
+        decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(25),
-            boxShadow: const [
+             borderRadius: BorderRadius.circular(25),
+          boxShadow: const [
               BoxShadow(
                 color: Colors.black12,
                 blurRadius: 20,
@@ -35,7 +35,7 @@ class _FormScreenState extends State<FormScreen> {
             ],
           ),
           child: SingleChildScrollView(
-            child: Column(
+             child: Column(
               children: [
                 const TextField(
                   decoration: InputDecoration(labelText: 'Nombre'),
@@ -45,16 +45,16 @@ class _FormScreenState extends State<FormScreen> {
                 ),
                 const SizedBox(height: 20),
 
-                /// GÉNERO - DESPLEGABLE
+                /// genero 
                 const Align(
                   alignment: Alignment.centerLeft,
                   child: Text('Género:', style: TextStyle(fontSize: 16)),
                 ),
-                DropdownButtonFormField<String>(
+               DropdownButtonFormField<String>(
                   value: selectedGender,
-                  isExpanded: true,
-                  hint: const Text('Selecciona tu género'),
-                  items: ['Femenino', 'Masculino', 'Otro'].map((String value) {
+                isExpanded: true,
+                hint: const Text('Selecciona tu género'),
+                items: ['Femenino', 'Masculino', 'Otro'].map((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(value),
@@ -69,7 +69,7 @@ class _FormScreenState extends State<FormScreen> {
 
                 const SizedBox(height: 20),
 
-                /// ESTADO CIVIL - DESPLEGABLE
+                /// estado
                 const Align(
                   alignment: Alignment.centerLeft,
                   child: Text('Estado Civil:', style: TextStyle(fontSize: 16)),
@@ -92,24 +92,33 @@ class _FormScreenState extends State<FormScreen> {
                 ),
 
                 const SizedBox(height: 30),
-
-                Row(
+            /// botones
+              Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    //  Guardar
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(255, 253, 174, 85),
                       ),
                       child: const Text('Guardar'),
                     ),
-                    ElevatedButton(
-                      onPressed: () {},
+
+               //  Cancelar
+                 ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey,
                       ),
                       child: const Text('Cancelar'),
                     ),
+
+                    //  Salir
                     ElevatedButton(
                       onPressed: () {
                         Navigator.popUntil(context, ModalRoute.withName('/'));
