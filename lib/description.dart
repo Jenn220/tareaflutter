@@ -67,9 +67,9 @@ class DescriptionScreen extends StatelessWidget {
           ),
           Positioned(
             right: 20,
-            bottom: 20,
+              bottom: 20,
             child: Container(
-              width: 300, 
+               width: 300, 
                height: 300,
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
